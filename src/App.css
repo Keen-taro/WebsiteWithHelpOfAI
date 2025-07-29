@@ -1,0 +1,88 @@
+/* Styling dasar agar canvas memenuhi layar */
+body, html, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+}
+
+/* Wrapper untuk konten HTML di dalam kubus */
+.html-content .wrapper {
+  /*
+    Karena di-scale 0.1 di JSX, kita buat ukurannya 10x lebih besar di sini.
+    Contoh: 1200px di CSS akan menjadi 120px di layar.
+  */
+  width: 100%;
+  height: 50%;
+  background-color: rgba(16, 16, 20, 0);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(40, 40, 40, 0.3);
+  color: white;
+  text-align: center;
+}
+
+/* Styling untuk judul animasi */
+.html-content .animated-title {
+  /* Ukuran font juga dibuat 10x lebih besar */
+  font-size: 100px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  color: #E6E0FF;
+}
+
+/* Styling untuk paragraf */
+.html-content p {
+  font-size: 30px;
+  margin-top: 20px;
+  color: #A9A2C2;
+  line-height: 1.5;
+}
+
+.header-information  {
+  position: fixed; /* Membuatnya tetap di posisi yang sama meskipun ada scroll */
+  top: 20px; /* Jarak 20px dari atas layar */
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  
+  display: flex;
+  justify-content: center; /* Memusatkan tulisan */
+  align-items: center;
+  text-align: center;
+  
+  color: rgba(255, 255, 255, 0.6); /* Putih sedikit transparan agar elegan */
+  font-family: Arial, sans-serif;
+  font-size: 30px; /* Font kecil */
+  
+  z-index: 10; /* Pastikan berada di atas canvas */
+  pointer-events: none; /* PENTING: Agar tidak menghalangi interaksi dengan canvas */
+}
+
+/* Tambahkan ini di akhir file App.css Anda */
+.footer-credits {
+  position: fixed; /* Membuatnya tetap di posisi yang sama meskipun ada scroll */
+  bottom: 20px; /* Jarak 20px dari bawah layar */
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  
+  display: flex;
+  justify-content: center; /* Memusatkan tulisan */
+  align-items: center;
+  text-align: center;
+  
+  color: rgba(255, 255, 255, 0.6); /* Putih sedikit transparan agar elegan */
+  font-family: Arial, sans-serif;
+  font-size: 12px; /* Font kecil */
+  
+  z-index: 10; /* Pastikan berada di atas canvas */
+  pointer-events: none; /* PENTING: Agar tidak menghalangi interaksi dengan canvas */
+}
+
+.footer-credits p {
+  margin: 0;
+}

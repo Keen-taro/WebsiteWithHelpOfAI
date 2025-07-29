@@ -1,0 +1,8 @@
+.splash {
+  position: fixed; /* Penting agar posisinya absolut terhadap viewport */
+  border-radius: 50%;
+  transform: translate(-50%, -50%); /* Pusatkan elemen pada kursor */
+  pointer-events: none; /* Penting agar elemen tidak mengganggu klik mouse */
+  z-index: 9999; /* Pastikan tampil di atas segalanya */
+  filter: blur(5px); /* Efek blur agar terlihat seperti cat air */
+}
